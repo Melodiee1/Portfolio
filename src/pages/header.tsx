@@ -13,7 +13,7 @@ const navButtons: nav_buttons[] = [
 ];
 function NavButtonCard({ name, path }: { name: string, path: string }) {
     return ( <li>   <Link to={path}>{name}</Link>   </li> )
-}
+};
 
 function Header() {
 
@@ -26,12 +26,6 @@ function mapNavigationButtons() {
 return (
     <header>
         <div className="int_header">
-           
-
-            {/* <div className="sec_two status">
-                ❌ Not looking for a job
-            </div> */}
-
             <div className="sec_one">
                 <div className="nav"> <ul>    { mapNavigationButtons() }     </ul> </div>
             </div>

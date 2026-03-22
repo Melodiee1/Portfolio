@@ -1,0 +1,92 @@
+
+:root {
+    --secondary: rgb(171, 171, 171);
+}
+
+a { color: hsl(0, 0%, 88%) }
+
+.AboutMe_main {
+    padding: 1rem 5rem;
+    color: white;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 10vw;
+}
+.AboutMe_main .sec_one {
+
+}
+.AboutMe_main .sec_two {    
+
+}
+
+/* =================
+SECTION ONE
+================ */
+
+.AboutMe_main .sec_one h2 {
+    font-size: 4.5rem;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    color: white;
+}
+
+.AboutMe_main .sec_one .speciality {
+    font-size: 3rem;
+    font-weight: bold;
+    width: 500px;
+
+    .dev {
+        color: var(--secondary);
+    }
+}
+.AboutMe_main .sec_one .speciality * {
+    display: inline;
+}
+
+.AboutMe_main .sec_one .speciality .sec_one {
+    display: flex;
+    gap: 20px;
+
+    .react {
+        color: #61DAFB;
+        text-shadow: 1px 1px 8px rgb(0, 79, 79);
+    }
+    .typeScript {
+        color: #3178C6;
+        text-shadow: 1px 1px 8px rgb(3, 3, 190);
+    }
+}
+
+.AboutMe_main .sec_one .text {
+    font-size: 19px;
+    color: hsl(0, 0%, 75%);
+}
+
+.AboutMe_main .sec_one .get_two_know_me {
+    font-size: 1.2rem;
+
+    a {
+        display: inline;
+        text-decoration: solid underline white;
+    }
+}
+
+
+/* =================
+SECTION TWO
+================ */
+.AboutMe_main .sec_two {
+
+}
+
+.AboutMe_main .sec_two img {
+    width: 40vw;
+    height: auto;
+
+    border: 1px solid white;
+    border-radius: 12px;
+    box-shadow: 1px 1px 18px hsl(0, 0%, 36%);
+}
