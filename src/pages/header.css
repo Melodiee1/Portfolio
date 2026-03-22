@@ -1,79 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
+/* ── Reset ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:        #080808;
+  --surface:   #111111;
+  --border:    #1e1e1e;
+  --accent:    #c8a96e;
+  --accent-dim:#7a6540;
+  --text:      #f0ece4;
+  --muted:     #4a4540;
 }
 
+/* ── Header Shell ── */
 header {
-    align-self: stretch;
-    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(8, 8, 8, 0.85);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--border);
 
-    display: flex;
-    justify-content: flex-end;
-    padding: 1rem 2.2rem;
+    min-width: 100vw;
 }
+header::after {
+    content: '';
+    display: block;
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, var(--accent) 50%, transparent 100%);
+    opacity: 0.5;
+}
+
+/* ── Inner wrapper ── */
 .int_header {
-    
-}
-
-.int_header .sec_one {
-
-}
-
-.int_header .sec_one .nav {
-    
-}
-
-.int_header .sec_one .nav ul {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 8vw;
     display: flex;
-    flex-direction: row;
-    gap: 30px;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
 }
 
-.int_header .sec_one .nav ul li {
-    list-style-type: none;
+
+/* ── Nav section ── */
+.sec_one {
+    width: 100%;
+}
+
+.nav ul {
     list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
 }
 
-.int_header .sec_one .nav ul li a {
+/* ── Nav Links ── */
+.nav ul li a {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
     text-decoration: none;
-    font-size: 18px;
-    letter-spacing: 1px;
-    position: relative;
+    color: var(--muted);
+    padding: 0.45rem 0.85rem;
+    border-radius: 3px;
+    border: 1px solid transparent;
+    transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
     display: inline-block;
-
-    padding: 12px 20px;
-    border-radius: 8px;
-
-    background-color: transparent;
-    color: hsl(0, 0%, 60%);
-
-    transition: all 0.2s ease-in-out;
+    position: relative;
 }
-.int_header .sec_one .nav ul li a:hover {
-    color: hsl(0, 0%, 92%);
-    background-color: hsl(0, 0%, 12%);
-
-    text-shadow: 1px 1px 12px rgb(159, 159, 159);
-}
-.int_header .sec_one .nav ul li a:active {
-    transform: scale(0.95);
-}
-
-.int_header .sec_one .nav ul li a::after {
+.nav ul li a::after {
     content: '';
     position: absolute;
-    bottom: 0;
-    left: 0;
-    
-    width: 0%;
-    height: 0%;
-
-    background-color: rgb(191, 191, 191);
-    box-shadow: 1px 1px 10px white;
-    transition: all 0.5s ease;
+    bottom: 4px;
+    left: 0.85rem;
+    right: 0.85rem;
+    height: 1px;
+    background: var(--accent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1);
 }
-.int_header .sec_one .nav ul li a:hover::after {
-    width: 100%;
-    height: 2px;
+.nav ul li a:hover {
+    color: var(--text);
+    border-color: var(--border);
+    background: var(--surface);
+}
+.nav ul li a:hover::after {
+    transform: scaleX(1);
+}
+.nav ul li a:focus {
+    color: var(--text);
+    border-color: var(--border);
+    background: var(--surface);
+}
+
+/* ── Active link (add class="active" via NavLink if desired) ── */
+.nav ul li a.active {
+    color: var(--accent);
+    border-color: var(--border);
+    background: var(--surface);
+}
+.nav ul li a.active::after {
+    transform: scaleX(1);
+}
+
+/* ── Slide-down entrance ── */
+header {
+    nimation: slideDown 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-100%); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+    .int_header { padding: 0 5vw; height: 56px; }
+
+    .nav ul { gap: 0; }
+
+    .nav ul li a {
+        font-size: 0.62rem;
+        padding: 0.4rem 0.6rem;
+        letter-spacing: 0.1em;
+    }
 }
