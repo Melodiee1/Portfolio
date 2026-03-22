@@ -1,0 +1,120 @@
+
+header {
+    position: sticky;
+    top: 0;
+}
+.int_header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+
+    padding: 2rem 1.2rem;
+}
+.int_header .sec_one {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 10px;
+
+    padding: 10px;
+}
+.int_header .sec_two {
+    font-size: 20px;
+}
+
+
+/* ===========
+    NAV BAR
+============= */
+.int_header .sec_one {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 0 3rem;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06);
+}
+
+.nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 64px;
+}
+
+.nav ul {
+  display: flex;
+  gap: 0.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Apply this to each <li> or <a> rendered by mapNavigationButtons() */
+.nav ul li a,
+.nav ul li button {
+  position: relative;
+  padding: 0.4rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #1a1a1a;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  border-radius: 6px;
+  transition: color 0.2s ease, background 0.2s ease;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+}
+
+.nav ul li a::after,
+.nav ul li button::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  width: 60%;
+  height: 2px;
+  background: #b45309; /* your rust/brown accent */
+  border-radius: 2px;
+  transition: transform 0.25s ease;
+}
+
+.nav ul li a:hover,
+.nav ul li button:hover {
+  color: #b45309;
+  background: rgba(180, 83, 9, 0.06);
+}
+
+.nav ul li a:hover::after,
+.nav ul li button:hover::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+/* Active state */
+.nav ul li a.active,
+.nav ul li button.active {
+  color: #b45309;
+}
+
+.nav ul li a.active::after,
+.nav ul li button.active::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+/* ===========
+    Status
+============= */
+.int_header .sec_two {
+    color: rgb(29, 0, 0);
+    font-weight: 600;
+}
