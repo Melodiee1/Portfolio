@@ -1,35 +1,30 @@
 import { Link } from 'react-router-dom';
-import './header.css'
 
-interface nav_buttons {
-    name: string,
-    key: string,
-    path: string,
-};
+interface nav_buttons { title: string, path: string, };
 const navButtons: nav_buttons[] = [
-    { key: '1', name: 'About Me',           path: '/'           },
-    { key: '2', name: 'Project Showcase',   path: '/projects'    },
-    { key: '3', name: 'Contact Me',         path: '/contact'   },
+    { title: 'About Me', path: '/' },
+    { title: 'Project Menu', path: '/projectMenu' },
+    { title: 'Contact', path: '/contact' },
 ];
-function NavButtonCard({ name, path }: { name: string, path: string }) {
-    return ( <li>   <Link to={path}>{name}</Link>   </li> )
-};
-
-function Header() {
-
-function mapNavigationButtons() {
-    return navButtons.map(button => (
-        <NavButtonCard key={button.key} name={button.name} path={button.path} />
-    ))
+function NavButtonCard({ title, path }: { title: string, path: string }) {
+    return <li> <Link to={path}> {title} </Link> </li>
 }
 
-return (
-    <header>
-        <div className="int_header">
-            <div className="sec_one">
-                <div className="nav"> <ul>    { mapNavigationButtons() }     </ul> </div>
+function Header() {
+    function MapNavButtons() {
+        return navButtons.map(button => (<NavButtonCard title={button.title} path={button.path} />))
+    }
+
+    return (
+        <header>
+            <div className="int-header">
+                { /* Navigation System */}
+                <div className="navigation-container">
+                    <ul className='navigation-list'> {MapNavButtons()} </ul>
+                </div>
+
             </div>
-        </div>
-    </header>
-)};
+        </header>
+    )
+}
 export default Header;

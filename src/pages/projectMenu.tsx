@@ -2,7 +2,9 @@
 function projectMenu() {
 
     return (
-        <h1>PROJECT MENU</h1>
+        <div className="project-menu-container body-container">
+
+        </div>
     )
 }
 export default projectMenu;
