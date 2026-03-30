@@ -1,7 +1,13 @@
 @import "tailwindcss";
 
 @theme {
+  /* Header */
   --color-header: hsl(0, 0%, 20%);
+  --color-nav-hover: hsl(0, 0%, 26%);
+  --color-nav-after: #242424;
+
+  /* About Me Page */
+  --font-header: " Nunito", cursive;
 }
 
 #body-container {

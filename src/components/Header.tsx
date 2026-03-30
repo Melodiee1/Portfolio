@@ -30,7 +30,10 @@ function mapNavBar() {
   function NavCard({ title, path }: { title: string; path: string }) {
     return (
       <li className="list-none">
-        <Link to={path} className="">
+        <Link
+          to={path}
+          className="text-gray-100 text-base p-2 pr-4 pl-4 hover:bg-nav-hover rounded-md relative w-full after:absolute after:content-[''] after:bg-blue-500 after:bottom-0 after:left-0 after:h-0.5 after:w-0 hover:after:w-full focus:after:w-full focus:after:h-0.5 focus:bg-nav-hover after:transition-all after:duration-300"
+        >
           {title}
         </Link>
       </li>
