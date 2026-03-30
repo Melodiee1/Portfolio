@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@theme {
+  --color-header: hsl(0, 0%, 20%);
+}
+
+#body-container {
+  background-color: hsl(0, 0%, 11%);
+}
+
+#header-container {
+  background: transparent;
+}
