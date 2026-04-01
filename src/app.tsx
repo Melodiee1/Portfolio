@@ -3,13 +3,13 @@ import { Outlet } from "react-router-dom";
 import "./_essentials.css";
 
 /* Components */
-import Header from "./components/Header.tsx";
+import Header from "./pages/Header/Header.tsx";
 
 /* Main App Component */
 function App() {
   return (
     <div id="body-container" className="">
-      <div className="">
+      <div className="main-container">
         <div className="">
           <Header />
         </div>

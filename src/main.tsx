@@ -31,7 +31,7 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<div className="body-container" />}>
       <RouterProvider router={router} />
     </Suspense>
   </StrictMode>,

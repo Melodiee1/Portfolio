@@ -1,19 +1,65 @@
 @import "tailwindcss";
 
 @theme {
-  /* Header */
-  --color-header: hsl(0, 0%, 20%);
-  --color-nav-hover: hsl(0, 0%, 26%);
-  --color-nav-after: #242424;
+  /* Main Themes */
+  --color-main: hsl(0, 0%, 10%);
 
-  /* About Me Page */
-  --font-header: " Nunito", cursive;
+  /* Header Themes */
+  --color-nav-h: hsl(0, 0%, 16%);
 }
 
-#body-container {
-  background-color: hsl(0, 0%, 11%);
+@layer components {
+  .nav-component {
+    background: color-mix(in srgb, hsl(0, 0%, 8%) 50%, transparent 50%);
+    backdrop-filter: blur(16px);
+  }
+  .nav-component-1 {
+    background: color-mix(in srgb, hsl(0, 0%, 5%) 50%, transparent 50%);
+    backdrop-filter: blur(24px);
+  }
+
+  .main-container {
+    background: hsl(0, 0%, 10%);
+    min-width: 100vw;
+    min-height: 100vh;
+  }
 }
 
-#header-container {
-  background: transparent;
+@layer utilities {
+  /* Fade In Animation */
+  @keyframes fade-in {
+    from {
+      transform: translateY(-20px);
+      backdrop-filter: blur(0);
+      opacity: 50%;
+    }
+    to {
+      transform: translateY(0);
+      backdrop-filter: blur(24px);
+      opacity: 100%;
+    }
+  }
+  .fade-in {
+    animation: fade-in 0.2s linear;
+  }
+
+  @keyframes fadeSlideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes expandWidth {
+    from {
+      width: 0;
+    }
+    to {
+      width: 10rem;
+    }
+  }
 }

@@ -1,16 +1,10 @@
-import Title from "./title.tsx";
-import HeadText from "./head-text.tsx";
+import HeroSection from "./hero-section/Hero.tsx";
 
 function Home() {
   return (
-    <section className="">
-      <div className="p-10 pt-30 flex flex-col md:flex-row md:justify-between gap-5 leading-none">
-        <Title />
-        <HeadText />
-      </div>
-
-      <div className=""></div>
-    </section>
+    <div className="flex md:flex-row flex-col">
+      <HeroSection />
+    </div>
   );
 }
 export default Home;
