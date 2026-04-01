@@ -6,11 +6,15 @@
 
   /* Header Themes */
   --color-nav-h: hsl(0, 0%, 16%);
+
+  /* Home page Themes */
+  --color-bg-1: hsl(0, 0%, 9%);
+  --color-bg-2: hsl(0, 0%, 8%);
 }
 
 @layer components {
   .nav-component {
-    background: color-mix(in srgb, hsl(0, 0%, 8%) 50%, transparent 50%);
+    background: color-mix(in srgb, hsl(0, 0%, 12%) 50%, transparent 50%);
     backdrop-filter: blur(16px);
   }
   .nav-component-1 {

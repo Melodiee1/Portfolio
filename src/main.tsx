@@ -11,7 +11,6 @@ import "./_essentials.css";
 /* Components */
 import App from "./App.tsx";
 const Home = lazy(() => import("./pages/Home/index.tsx"));
-const Skills = lazy(() => import("./pages/Skills/index.tsx"));
 const Projects = lazy(() => import("./pages/Projects/index.tsx"));
 const Contact = lazy(() => import("./pages/Contact/index.tsx"));
 
@@ -22,7 +21,6 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <Navigate to="/about-me" /> },
       { path: "/about-me", element: <Home /> },
-      { path: "/skills", element: <Skills /> },
       { path: "/projects", element: <Projects /> },
       { path: "/contact-me", element: <Contact /> },
     ],

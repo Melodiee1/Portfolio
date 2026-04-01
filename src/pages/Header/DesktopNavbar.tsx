@@ -7,7 +7,6 @@ interface _nav_links {
 const navLinks: _nav_links[] = [
   { title: "About Me", path: "/about-me" },
   { title: "Projects", path: "/projects" },
-  { title: "Skills", path: "/skills" },
   { title: "Contact Me", path: "/contact-me" },
 ];
 
