@@ -20,6 +20,7 @@ function NavbarCard({
         "hover:text-amber-300 hover:bg-white/5",
         "focus:text-amber-300 focus:bg-white/5 focus:outline-none",
         "active:scale-x-[0.98]",
+        "2xl:text-3xl",
         className,
       )}
     >

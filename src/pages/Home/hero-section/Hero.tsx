@@ -3,8 +3,8 @@ import HeadText from "./Head-Text.tsx";
 
 function HeroSection() {
   return (
-    <div className="w-full bg-bg-1">
-      <div className=" flex flex-col md:flex-row md:justify-between ">
+    <div className="w-full bg-bg-1 2xl:pt-16">
+      <div className=" flex flex-col lg:flex-row md:justify-between ">
         <Head />
         <HeadText />
       </div>
