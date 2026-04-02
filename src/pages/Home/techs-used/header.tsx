@@ -12,7 +12,7 @@ function Header() {
         </h1>
 
         {/* Subheading */}
-        <p className="text-lg md:text-xl text-gray-400 leading-relaxed">
+        <p className="text-lg md:text-xl text-left md:text-center text-gray-400 leading-relaxed">
           I build clean, responsive, and engaging web experiences using{" "}
           <span className="text-white font-medium">modern technologies</span>.
         </p>

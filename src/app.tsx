@@ -9,10 +9,8 @@ import Header from "./pages/Header/Header.tsx";
 function App() {
   return (
     <div id="body-container" className="">
-      <div className="main-container">
-        <div className="">
-          <Header />
-        </div>
+      <div className="main-container relative">
+        <Header />
 
         <div className="">
           <Outlet />
