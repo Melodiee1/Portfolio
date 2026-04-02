@@ -25,13 +25,12 @@
   .main-container {
     background: hsl(0, 0%, 10%);
     min-width: 100vw;
-    min-height: 100vh;
   }
 }
 
 @layer utilities {
   /* Fade In Animation */
-  @keyframes fade-in {
+  @keyframes slideDown {
     from {
       transform: translateY(-20px);
       backdrop-filter: blur(0);
@@ -43,8 +42,8 @@
       opacity: 100%;
     }
   }
-  .fade-in {
-    animation: fade-in 0.2s linear;
+  .slide-down {
+    animation: slideDown 0.2s linear;
   }
 
   @keyframes fadeSlideUp {
@@ -57,13 +56,52 @@
       transform: translateY(0);
     }
   }
+  .fade-slide-up {
+    animation: 0.2s fadeSlideUp ease-in;
+  }
 
-  @keyframes expandWidth {
+  @keyframes slideFromRight {
     from {
-      width: 0;
+      opacity: 0;
+      transform: translateX(22px);
     }
     to {
-      width: 10rem;
+      opacity: 1;
+      transform: translateX(0);
     }
+  }
+  .slide-from-right {
+    animation: 0.4s slideFromRight ease-in;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  .fade-in {
+    animation: 0.5s fadeIn ease-in-out;
+  }
+
+  @keyframes slowDrift {
+    0%,
+    100% {
+      transform: translate(0, 0);
+    }
+    25% {
+      transform: translate(20px, -30px);
+    }
+    50% {
+      transform: translate(-15px, -20px);
+    }
+    75% {
+      transform: translate(30px, 10px);
+    }
+  }
+  .slow-drift {
+    animation: 20s slowDrift infinite;
   }
 }

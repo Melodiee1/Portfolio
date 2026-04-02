@@ -5,12 +5,12 @@ function HeadText() {
     "text-white underline underline-offset-4 decoration-amber-500 decoration-[1px] hover:text-amber-400 transition-colors";
 
   return (
-    <div className="lg:w-[60%] px-4 md:pt-12">
-      <div className="text-amber-400 font-semibold tracking-widest text-md 2xl:text-5xl">
+    <div className="lg:w-[60%] px-4">
+      <div className="text-amber-400 font-semibold tracking-widest text-md 2xl:text-5xl slide-from-right">
         ABOUT MYSELF
       </div>
 
-      <div className="text-gray-300 text-lg leading-relaxed p-5 pl-2 2xl:text-4xl 2xl:pl-12">
+      <div className="text-gray-300 text-lg leading-relaxed p-5 pl-2 2xl:text-4xl 2xl:pl-12 fade-in">
         <p>
           I am a <span className="text-white font-medium">14-year-old</span>{" "}
           self-taught

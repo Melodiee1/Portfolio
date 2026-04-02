@@ -33,7 +33,7 @@ function MobileNavbar() {
           onClick={() => {
             setMenuOpen((prev) => !prev);
           }}
-          className="nav-component-1 fade-in absolute top-15 left-0 flex flex-col min-w-full"
+          className="nav-component-1 slide-down absolute top-15 left-0 flex flex-col min-w-full"
         >
           {navLinks.map((link, index) => (
             <NavbarCard

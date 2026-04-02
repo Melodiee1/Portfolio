@@ -3,8 +3,31 @@ import HeadText from "./Head-Text.tsx";
 
 function HeroSection() {
   return (
-    <div className="w-full bg-bg-1 2xl:pt-16">
-      <div className=" flex flex-col lg:flex-row md:justify-between ">
+    <div className=" bg-bg-1">
+      <div className="absolute inset-0">
+        <img
+          className="w-full h-full object-cover opacity-40"
+          src="/hero-bg.jpg"
+        />
+        <div className="absolute inset-0 bg-linear-to-b from-black/10 via-black/10 to-black" />
+      </div>
+
+      <div className="absolute inset-0 overflow-hidden pointer-events-none z-1">
+        {[...Array(30)].map((_, index) => (
+          <div
+            className="absolute w-1 h-1 rounded-[50%] opacity-60 shadow-lg shadow-emerald-500/50 slow-drift"
+            style={{
+              background: "#20B2A6",
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              animationDelay: `${Math.random() * 20}s`,
+            }}
+            key={index}
+          />
+        ))}
+      </div>
+
+      <div className="relative flex flex-col lg:flex-row md:justify-between py-40 w-full min-h-screen backdrop-blur-sm">
         <Head />
         <HeadText />
       </div>

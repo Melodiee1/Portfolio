@@ -8,13 +8,13 @@ import Header from "./pages/Header/Header.tsx";
 /* Main App Component */
 function App() {
   return (
-    <div id="body-container" className="">
+    <div id="" className="">
       <div className="main-container relative">
         <Header />
+      </div>
 
-        <div className="">
-          <Outlet />
-        </div>
+      <div className="">
+        <Outlet />
       </div>
     </div>
   );
