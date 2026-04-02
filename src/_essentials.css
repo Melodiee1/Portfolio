@@ -8,8 +8,8 @@
   --color-nav-h: hsl(0, 0%, 16%);
 
   /* Home page Themes */
-  --color-bg-1: hsl(0, 0%, 9%);
-  --color-bg-2: hsl(0, 0%, 8%);
+  --color-bg-1: hsl(0, 0%, 1%);
+  --color-bg-2: hsl(0, 0%, 3%);
 }
 
 @layer components {

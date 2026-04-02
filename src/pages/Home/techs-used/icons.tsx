@@ -33,24 +33,26 @@ const techs: _techs[] = [
 
 function Icons() {
   return (
-    <section className="flex gap-6 justify-center flex-wrap p-5 w-full">
-      {techs.map((tech, index) => (
-        <a
-          className="flex flex-col items-center gap-0.5 w-27 height-27 rounded-[50%] hover:scale-105 transition ease-in-out hover:shadow-2xl hover:[&>img]shadow-2xl hover:[&>img]shadow-amber-50 hover:[&>p]:text-white hover:[&>p]:text-shadow-amber-100 hover:[&>p]:text-shadow-2xs active:scale-95"
-          key={index}
-          href={tech.path}
-          target="_blank"
-        >
-          <img
-            className={["w-16 h-16", tech.border].join("")}
-            src={tech.imgPath}
-            alt={tech.title}
-          />{" "}
-          <p className="text-mist-300 text-lg italic font-semibold hover:text-white hover:font-normal transition ease-in-out duration-500">
-            {tech.title}
-          </p>
-        </a>
-      ))}
+    <section className="flex flex-col gap-4 items-center backdrop-blur-[1px] py-4">
+      <div className="flex gap-6 justify-center flex-wrap p-5 w-fit">
+        {techs.map((tech, index) => (
+          <a
+            className="flex flex-col items-center gap-0.5 w-27 height-27 rounded-[50%] hover:scale-105 transition ease-in-out hover:shadow-2xl hover:[&>img]shadow-2xl hover:[&>img]shadow-amber-50 hover:[&>p]:text-white active:scale-95"
+            key={index}
+            href={tech.path}
+            target="_blank"
+          >
+            <img
+              className={["w-16 h-16", tech.border].join("")}
+              src={tech.imgPath}
+              alt={tech.title}
+            />{" "}
+            <p className="text-mist-300 text-md font-semibold transition ease-in-out duration-500">
+              {tech.title}
+            </p>
+          </a>
+        ))}
+      </div>
     </section>
   );
 }
