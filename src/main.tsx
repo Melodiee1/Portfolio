@@ -9,7 +9,7 @@ import {
 import "./_essentials.css";
 
 /* Components */
-import App from "./App.tsx";
+import App from "./app.tsx";
 const Home = lazy(() => import("./pages/Home/index.tsx"));
 const Projects = lazy(() => import("./pages/Projects/index.tsx"));
 const Contact = lazy(() => import("./pages/Contact/index.tsx"));
