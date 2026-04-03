@@ -27,7 +27,7 @@ function HeadText() {
 
         <p className="mt-4 2xl:mt-8">
           You can navigate to{" "}
-          <Link to="/contact-page" className={linkStyle}>
+          <Link to="/contact-me" className={linkStyle}>
             Contact Page
           </Link>{" "}
           to contact me directly.

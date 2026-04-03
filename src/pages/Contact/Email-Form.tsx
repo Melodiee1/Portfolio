@@ -38,7 +38,7 @@ function EmailForm() {
   };
 
   return (
-    <section className="w-[90%] max-w-130 lg:max-w-[90%] h-fit py-7 px-3 bg-form border-4 border-reachout-border rounded-3xl shadow-sm/20 shadow-white">
+    <section className="w-[90%] max-w-130 lg:max-w-[90%] h-fit py-7 px-3 bg-form border-4 border-reachout-border rounded-3xl shadow-sm/20 shadow-white slide-down">
       <form
         ref={form}
         onSubmit={sendEmail}

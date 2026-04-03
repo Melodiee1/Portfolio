@@ -1,3 +1,4 @@
+import { forwardRef } from "react";
 import { Link } from "react-router-dom";
 
 import Icons from "./icons.tsx";
@@ -5,7 +6,11 @@ import Header from "./header.tsx";
 
 function Techs() {
   return (
-    <div className="flex flex-col justify-center gap-20 bg-bg-1 pt-12 pb-15 min-h-screen">
+    <div
+      className={[
+        "flex flex-col justify-center gap-20 bg-bg-1 pt-12 pb-15 min-h-screen",
+      ].join(" ")}
+    >
       <div>
         <Header />
         <Icons />

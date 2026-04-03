@@ -5,7 +5,7 @@ function SectionOne() {
 
   return (
     <div className="w-[90%] max-w-250 lg:max-w-[90%] px-1 lg:px-12 py-12 flex flex-col gap-5">
-      <h1 className="text-white text-4xl font-semibold tracking-wide mb-7">
+      <h1 className="text-white text-4xl font-semibold tracking-wide mb-7 fade-slide-up">
         Lets <span className="text-amber-500">Connect</span>
       </h1>
 
@@ -14,7 +14,7 @@ function SectionOne() {
         necessitatibus quisquam dolore numquam consectetur facilis a.
       </div>
 
-      <div className="flex flex-col self-center gap-4">
+      <div className="flex flex-col self-center gap-4 fade-in">
         <a href="" className={`${aHrefClass}`}>
           <img src="/socialMedia/gmail.png" className={`${imageClass}`} />
           ajeshkharel5@gmail.com
