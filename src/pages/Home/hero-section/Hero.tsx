@@ -14,7 +14,7 @@ function HeroSection() {
       </div>
 
       <div className="absolute inset-0 pointer-events-none z-1">
-        {[...Array(5)].map((_, index) => (
+        {[...Array(32)].map((_, index) => (
           <div
             className="absolute w-1 h-1 rounded-[50%] opacity-60 shadow-lg shadow-emerald-500/50 slow-drift"
             style={{
