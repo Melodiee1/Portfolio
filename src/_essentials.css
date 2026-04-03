@@ -10,6 +10,15 @@
   /* Home page Themes */
   --color-bg-1: hsl(0, 0%, 1%);
   --color-bg-2: hsl(0, 0%, 3%);
+
+  /* Email Form */
+  --color-form: hsl(0, 0%, 6%);
+  --color-email-input: hsl(0, 0%, 22%);
+  --color-email-input-focus: hsl(0, 0%, 40%);
+
+  /* Reach Out Section */
+  --color-reachout-border: hsl(0, 2%, 12%);
+  --color-reachout-border-hover: hsl(0, 2%, 25%);
 }
 
 @layer components {
