@@ -3,7 +3,7 @@ import SectionOne from "./Section-one.tsx";
 
 export default function Contact() {
   return (
-    <div className="relative min-w-screen min-h-screen bg-bg-1 pt-25 flex flex-col items-center lg:flex-row">
+    <div className="relative min-w-screen min-h-screen bg-bg-1 p-1 md:p-5 lgp-12 pt-25 pb-15 flex flex-col items-center lg:flex-row">
       <SectionOne />
       <EmailForm />
     </div>

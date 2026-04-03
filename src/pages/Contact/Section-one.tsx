@@ -1,10 +1,10 @@
 function SectionOne() {
   const aHrefClass =
-    "flex gap-10 items-center px-6 py-3 border border-reachout-border hover:border-reachout-border-hover rounded-md text-gray-300 max-w-100% hover:text-white transition ease-in-out duration-300 text-lg";
+    "flex gap-10 items-center px-1 md:px-3 lg:px-6 py-3 border border-reachout-border hover:border-reachout-border-hover rounded-md text-gray-300 max-w-100% hover:text-white transition ease-in-out duration-300 text-lg";
   const imageClass = "w-10 h-auto";
 
   return (
-    <div className="w-[90%] max-w-250 lg:max-w-[90%] p-12 flex flex-col gap-5">
+    <div className="w-[90%] max-w-250 lg:max-w-[90%] px-1 lg:px-12 py-12 flex flex-col gap-5">
       <h1 className="text-white text-4xl font-semibold tracking-wide mb-7">
         Lets <span className="text-amber-500">Connect</span>
       </h1>
@@ -14,7 +14,7 @@ function SectionOne() {
         necessitatibus quisquam dolore numquam consectetur facilis a.
       </div>
 
-      <div className="flex flex-col gap-4 px-6">
+      <div className="flex flex-col self-center gap-4">
         <a href="" className={`${aHrefClass}`}>
           <img src="/socialMedia/gmail.png" className={`${imageClass}`} />
           ajeshkharel5@gmail.com

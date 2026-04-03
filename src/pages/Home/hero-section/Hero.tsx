@@ -3,9 +3,9 @@ import HeadText from "./Head-Text.tsx";
 
 function HeroSection() {
   return (
-    <div className=" bg-gray-900 w-full min-h-screen">
-      {/* Cool Background and animation but too laggy so removed it */}
-      <div className="absolute inset-0">
+    <div className=" bg-bg-1 w-full min-h-screen">
+      {/* Cool Background and animation but too laggy so removed it (gonna un-comment when its time to push it into production) */}
+      {/* <div className="absolute inset-0">
         <img
           className="w-full h-full object-cover opacity-40"
           src="/hero-bg.jpg"
@@ -26,7 +26,7 @@ function HeroSection() {
             key={index}
           />
         ))}
-      </div>
+      </div> */}
       <div className="relative flex gap-10 md:gap-4 flex-col lg:flex-row md:justify-between py-30 md:py-50 backdrop-blur-sm">
         <Head />
         <HeadText />
