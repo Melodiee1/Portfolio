@@ -1,8 +1,8 @@
 import { forwardRef } from "react";
 import { Link } from "react-router-dom";
 
-import Icons from "./Icons.tsx";
-import Header from "./Header.tsx";
+import Icons from "./icons.tsx";
+import Header from "./header.tsx";
 
 function Techs() {
   return (
