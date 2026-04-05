@@ -45,32 +45,11 @@ import JourneyCard, { type _milestones } from "./JourneyCard.tsx";
 
 const milestones: _milestones[] = [
   {
-    time: "Late 2022",
-    position: "right",
-    title: "The Spark of Interest",
-    content:
-      "Discovered the world of software development in school and executed my first lines of HTML.",
-  },
-  {
-    time: "Mid 2023 — Early 2024",
+    time: "Early 2026",
     position: "left",
-    title: "Building the Foundation",
+    title: "Modern Frameworks & Styling",
     content:
-      "Dedicated my free time to mastering the core web triad: HTML5, CSS3, and modern JavaScript fundamentals.",
-  },
-  {
-    time: "Early 2024",
-    position: "right",
-    title: "First Deployment",
-    content:
-      "Successfully built and logic-tested a functional Calculator application using vanilla web technologies.",
-  },
-  {
-    time: "Late 2024",
-    position: "left",
-    title: "Embracing Type Safety",
-    content:
-      "Transitioned to TypeScript to write more robust, maintainable, and error-free code.",
+      "Upskilled into the React ecosystem for component-based architecture and adopted Tailwind CSS for rapid, responsive UI development.",
   },
   {
     time: "Mid 2025",
@@ -80,24 +59,40 @@ const milestones: _milestones[] = [
       "Adopted Git and GitHub, integrating professional version control and open-source workflows into my development cycle.",
   },
   {
-    time: "Early 2026",
+    time: "Late 2024",
     position: "left",
-    title: "Modern Frameworks & Styling",
+    title: "Embracing Type Safety",
     content:
-      "Upskilled into the React ecosystem for component-based architecture and adopted Tailwind CSS for rapid, responsive UI development.",
+      "Transitioned to TypeScript to write more robust, maintainable, and error-free code.",
   },
   {
-    time: "In the coming future",
+    time: "Early 2024",
     position: "right",
-    title: "Projects Building",
+    title: "First Deployment",
     content:
-      "Going to be building many real world projects to further upskill my programming skills.",
+      "Successfully built and logic-tested a functional Calculator application using vanilla web technologies.",
+  },
+  {
+    time: "Mid 2023 — Early 2024",
+    position: "left",
+    title: "Building the Foundation",
+    content:
+      "Dedicated my free time to mastering the core web triad: HTML5, CSS3, and modern JavaScript fundamentals.",
+  },
+  {
+    time: "Late 2022",
+    position: "right",
+    title: "The Spark of Interest",
+    content:
+      "Discovered the world of software development in school and executed my first lines of HTML.",
   },
 ];
 
 function MapJourney() {
   return (
-    <div className="flex flex-col min-w-full px-20 gap-20 sm:gap-2">
+    <div className="relative flex flex-col min-w-full px-20 gap-20 sm:gap-2 py-10">
+      <div className="absolute top-0 right-[50%] w-0.5 h-full bg-zinc-900"></div>
+
       {milestones.map((milestone, index) => (
         <JourneyCard
           key={index}

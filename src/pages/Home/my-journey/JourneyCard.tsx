@@ -1,3 +1,5 @@
+import { useInView } from "../../../hooks/useInView.ts";
+
 export interface _milestones {
   time: string;
   position: "left" | "right";
@@ -12,15 +14,22 @@ export default function JourneyCard({
   time,
   content,
 }: _milestones) {
+  const { ref, inView } = useInView();
+
   return (
     <div
-      className={` group relative flex flex-col gap-4 px-8 py-6 bg-zinc-900 backdrop-blur-sm border-y border-x-2 border-zinc-800/50 rounded-2xl transition-all duration-500 ease-out  hover:bg-zinc-900 hover:border-amber-500/50 hover:shadow-[0_20px_50px_rgba(245,158,11,0.1)] hover:-translate-y-1 w-[90vw] sm:w-112.5
-      ${
-        position === "right"
-          ? "self-center sm:self-start sm:border-r-amber-500/50"
-          : "self-center sm:self-end sm:border-l-amber-500/50"
-      }
-      `}
+      ref={ref}
+      className={[
+        `group relative flex flex-col gap-4 px-8 py-6 bg-zinc-900 backdrop-blur-2xl border-y border-x-2 border-zinc-800/50 rounded-2xl transition-all duration-500 ease-out  hover:bg-zinc-900 hover:border-amber-500/70 hover:shadow-[0_20px_50px_rgba(245,158,11,0.1)] hover:-translate-y-1 w-[90vw] sm:w-112.5`,
+        `after:content-[''] after:w-[25%] after:h-5 after:bg- after:absolute after:top-[45%] after:border-t-2 after:border-zinc-900`,
+        `transition-all duration-700 ease-out ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`,
+        `${
+          position === "left"
+            ? "self-center sm:self-start sm:border-r-amber-500/50 after:-right-[25%] after:rounded-l-2xl"
+            : "self-center sm:self-end sm:border-l-amber-500/50 after:-left-[25%] after:rounded-r-2xl"
+        }
+      `,
+      ].join(" ")}
     >
       {/* Decorative Gradient Glow */}
       <div className="absolute inset-0 -z-10 bg-linear-to-br from-amber-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl" />
@@ -47,7 +56,7 @@ export default function JourneyCard({
       <div
         className={`
         hidden sm:block absolute top-1/2 -translate-y-1/2 w-3 h-3 rounded-full bg-zinc-800 border-2 border-amber-500
-        ${position === "right" ? "-right-1.75" : "-left-1.75"}
+        ${position === "left" ? "-right-1.75" : "-left-1.75"}
       `}
       />
     </div>
