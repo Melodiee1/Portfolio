@@ -2,16 +2,24 @@ import "../../../_essentials.css";
 
 function Head() {
   return (
-    <h1 className="w-full lg:w-fit flex flex-col md:flex-wrap items-center gap-6 md:px-15 font-[Cursive] fade-slide-up text-center">
-      <div className="text-mist-500 font-semibold text-2xl md:text-4xl lg:self-center pl-6 md:pl-12 pr-4">
-        HI, I'M
-      </div>
-      <div className="text-7xl sm:text-[90px] italic font-bold text-amber-500 2xl:text-[250px] text-shadow-sm text-shadow-amber-500">
+    <h1
+      className={[
+        "text-center font-['Bricolage_Grotesque'] px-12 fade-slide-up",
+        "w-fit lg:w-[50%]",
+        "flex flex-col items-center gap-2 md:grid md:grid-cols-2 md:grid-rows-2 lg:flex lg:flex-col lg:items-center lg:gap-2",
+      ].join(" ")}
+    >
+      <span className="col-span-2 text-lg md:text-xl lg:text-2xl font-light tracking-[0.3em] uppercase text-zinc-400">
+        Hi, I'm
+      </span>
+
+      <span className="text-6xl md:text-7xl lg:text-9xl font-extrabold leading-none bg-linear-to-br from-amber-300 via-amber-500 to-orange-600 bg-clip-text text-transparent">
         Ajesh
-      </div>
-      <div className="text-7xl sm:text-[90px] italic font-bold text-amber-500 2xl:text-[250px] text-shadow-sm text-shadow-amber-500">
+      </span>
+
+      <span className="text-6xl md:text-7xl lg:text-9xl font-extrabold leading-none text-white">
         Kharel
-      </div>
+      </span>
     </h1>
   );
 }

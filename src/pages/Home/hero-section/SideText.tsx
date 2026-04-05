@@ -1,19 +1,18 @@
 import { Link } from "react-router-dom";
 
-function HeadText() {
+function SideText() {
   const linkStyle =
-    "text-white underline underline-offset-4 decoration-amber-500 decoration-[1px] hover:text-amber-400 transition-colors";
+    "text-white underline decoration-dotted underline-offset-4 decoration-amber-500 decoration-[1px] hover:text-amber-400 transition-colors px-0.5";
 
   return (
-    <div className="lg:w-[60%] px-4">
+    <div className="lg:w-[60%] bg-zinc-950 px-4">
       <div className="text-amber-400 font-semibold tracking-widest text-md 2xl:text-5xl slide-from-right">
         ABOUT MYSELF
       </div>
 
       <div className="text-gray-300 text-lg leading-relaxed p-5 pl-2 2xl:text-4xl 2xl:pl-12 fade-in">
         <p>
-          I am a <span className="text-white font-medium">14-year-old</span>{" "}
-          self-taught
+          I am a 14-year-old self-taught
           <span className="text-white font-medium"> front-end developer</span>.
           I live in <span className={linkStyle}>Nepal, Koshi Province</span>,
           and am currently studying at{" "}
@@ -33,15 +32,11 @@ function HeadText() {
           to contact me directly.
         </p>
 
-        <div className="mt-10 2xl:mt-20 pl-4 border-l-4 border-amber-500 italic text-mist-500">
+        <div className="mt-10 2xl:mt-20 pl-4 border-l-2 border-amber-500 italic text-mist-400 text-lg">
           Have a great time navigating my portfolio...
-        </div>
-
-        <div className="text-olive-400 italic font-semibold mt-5 2xl:mt-10">
-          ✔ Open to learning opportunities
         </div>
       </div>
     </div>
   );
 }
-export default HeadText;
+export default SideText;

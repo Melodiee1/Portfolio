@@ -3,7 +3,7 @@ function Header() {
     <section className="flex flex-col items-center gap-4.5">
       <div className="flex flex-col gap-4 px-4">
         {/* Main Title */}
-        <h1 className="text-3xl md:text-5xl text-gray-200 leading-tight p-5 pl-4 flex gap-3 flex-wrap justify-center font-[Cursive]">
+        <h1 className="text-3xl md:text-5xl text-gray-200 leading-tight p-5 pl-4 flex gap-3 flex-wrap justify-center font-['Bricolage_Grotesque']">
           <span className="text-gray-300">Frontend</span>{" "}
           <span className="text-amber-400 font-bold">Developer</span>{" "}
           <span className="text-gray-400 font-semibold">&</span>{" "}

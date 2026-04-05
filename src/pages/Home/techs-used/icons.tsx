@@ -7,25 +7,25 @@ interface _techs {
 const techs: _techs[] = [
   {
     title: "React",
-    imgPath: "/techs/react.png",
+    imgPath: "/tech-images/react.png",
     path: "https://react.dev/",
     border: "border rounded",
   },
   {
     title: "Typescript",
-    imgPath: "/techs/typescript.png",
+    imgPath: "/tech-images/typescript.png",
     path: "https://www.typescriptlang.org/",
     border: "border rounded",
   },
   {
     title: "TailwindCSS",
-    imgPath: "/techs/tailwind.svg",
+    imgPath: "/tech-images/tailwind.svg",
     path: "https://tailwindcss.com/",
     border: "",
   },
   {
     title: "GitHub",
-    imgPath: "/techs/github.png",
+    imgPath: "/tech-images/github.png",
     path: "https://github.com/",
     border: "border rounded-[50%]",
   },

@@ -1,10 +1,10 @@
-import EmailForm from "./Email-Form.tsx";
-import SectionOne from "./Section-one.tsx";
+import ReachOut from "./ReachOut.tsx";
+import EmailForm from "./EmailForm.tsx";
 
 export default function Contact() {
   return (
     <div className="relative min-w-screen min-h-screen bg-bg-1 p-1 md:p-5 lgp-12 pt-25 pb-15 flex flex-col items-center lg:flex-row">
-      <SectionOne />
+      <ReachOut />
       <EmailForm />
     </div>
   );

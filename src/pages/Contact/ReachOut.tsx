@@ -1,4 +1,4 @@
-function SectionOne() {
+function ReachOut() {
   const aHrefClass =
     "flex gap-10 items-center px-1 md:px-3 lg:px-6 py-3 border border-reachout-border hover:border-reachout-border-hover rounded-md text-gray-300 max-w-100% hover:text-white transition ease-in-out duration-300 text-lg";
   const imageClass = "w-10 h-auto";
@@ -63,4 +63,4 @@ function SectionOne() {
     </div>
   );
 }
-export default SectionOne;
+export default ReachOut;
